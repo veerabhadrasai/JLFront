@@ -1,0 +1,477 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color for the body */
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Header styling */
+/* Styling for the navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(229, 233, 235);
+  z-index: 999; /* Ensure it stays above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the app name */
+.appName {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(215, 223, 225, 0.808);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appName h3, .appName h1 {
+  margin-right: 4px;
+  font-size: 1.5em; /* Adjust as needed */
+  color: rgb(0, 0, 0); /* Text color for the app name */
+}
+
+.appName h3{
+  font-size: 0.8em;
+}
+.appName img{
+  height: 30px;
+  width:30px;
+  mix-blend-mode:darken;
+}
+
+/* Styling for the navigation bar */
+.navbar1 {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  background-color: white;
+}
+
+/* Styling for the navigation links */
+.navbar1 a {
+  text-decoration: none;
+  color: #000; /* Text color for the links */
+  position: relative;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+/* Styling for the active link */
+.navbar1 a.active::after{
+  content: attr(data-title);
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  border-top: solid black 2px; 
+}
+
+/* Styling for the images within the navigation links */
+.navbar1 img {
+  width: 100px; /* Set the width of images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Remove margin from the last image */
+.navbar1 a:last-child img {
+  margin-right: 0;
+}
+
+/* Scale effect on hover for the images */
+.navbar1 a:hover img {
+  transform: scale(1.1);
+}
+
+/* Styling for the card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Gap between cards */
+  margin-top: 230px; /* Adjust as needed to position the cards below the navbar */
+  background-color: aliceblue;
+}
+
+.headName{
+  position: absolute;
+}
+
+/* Card styling */
+.card {
+  background-color: rgb(255, 255, 255);
+   /* border: 2px solid black; */
+  padding: 20px; /* Add padding to create space inside the card */
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.208);
+}
+
+/* Heading styling */
+.heading {
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+/* Job role styling */
+.heading h2 {
+  margin: 0; /* Remove default margins */
+}
+
+/* Company name styling */
+.heading h5 {
+  margin: 0; /* Remove default margins */
+  font-style: italic; /* Optionally make company name italic */
+}
+
+/* Additional details styling */
+.card p {
+  margin-bottom: 5px; /* Add some space below each detail */
+}
+
+/* View details link styling */
+.card h4 {
+  margin-top: 10px; /* Add some space above the link */
+}
+
+.card h4 a {
+  text-decoration: none;
+  color: blue; /* Link color */
+  margin-left: 149px;
+}
+
+.card h4 a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.card button {
+  background-color: rgb(246, 254, 254); /* Background color */
+  color: blue; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: 3px solid rgb(255, 255, 255); /* Border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+.card button:hover {
+  background-color: rgb(220, 245, 245); /* Hover background color */
+}
+
+
+.jobDetails {
+  background-color: rgb(229, 233, 235);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.JbTitle {
+  color: #333;
+}
+
+.jbheading h2 {
+  color: #000;
+  margin: 0;
+}
+
+.jbheading h5 {
+  color: #555;
+  margin: 0;
+}
+
+.subJb p {
+  color: #333;
+  margin: 5px 0;
+}
+
+.discription {
+  color: #555;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Styling for the outer div */
+.sdheadline{
+  position: absolute;
+}
+.studyDetails {
+  background-color: rgb(229, 233, 235);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.studyDetails h1 {
+  color: #333;
+}
+
+.sdheading h2.sd-title {
+  color: #000;
+  margin: 0;
+}
+
+.studyDetails p {
+  color: #333;
+  margin: 5px 0;
+}
+
+.studyDetails .discription {
+  color: #555;
+  margin-top: 10px;
+}
+
+.studyDetails a {
+  text-decoration: none;
+}
+
+.studyDetails button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.studyDetails button:hover {
+  background-color: #2980b9;
+}
+
+
+
+
+/* Media query for larger screens */
+@media screen and (min-width: 1080px) {
+  .card h4 a {
+    margin-left: 260px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 5 columns on desktop screens */
+  }
+  .card{
+    margin-top: 90px;
+  }
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .card-container {
+    gap: 10px; 
+    margin-top: 290px;
+    grid-template-columns: repeat(1, 1fr); /* 5 columns on desktop screens */
+  }
+  .navbar1 a {
+    margin-right:-1px;
+    margin-left: -1px;
+  }
+  .headName{
+    position: relative;
+  }
+.card h4 a {
+  margin-left: 260px;
+}
+   .sdheadline{
+    position: relative;
+   }
+}
+
+/* @media screen and (max-width: 588px){
+  .card h4 a {
+    margin-left: 250px;
+  }
+} */
+
+@media screen and (max-width: 410px){
+  .navbar1 a {
+    margin-right:-1px;
+    margin-left: -14px;
+  }
+  .card h4 a {
+    margin-left: 215px;
+  }
+}
+           
+/*//////////////////For Backend purpose//////////////////////*/
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.upload h2 {
+  margin: 10px 0;
+}
+
+.upload button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload button:hover {
+  background-color: #29b94b;
+}
+
+.upload a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/*///////////////////////add Job and Study///////////////////////*/
+h1 {
+  text-align: center; /* Center align the heading */
+}
+
+form {
+  width: 50%; /* Set form width */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+label {
+  display: block; /* Make labels block-level elements */
+  margin-top: 10px; /* Add some space above each label */
+}
+
+select,
+input[type="text"],
+textarea {
+  width: 100%; /* Make inputs and select full-width */
+  padding: 8px; /* Add padding */
+  margin-top: 5px; /* Add some space above each input */
+  border-radius: 5px; /* Add border radius */
+  border: 1px solid #ccc; /* Add border */
+}
+
+select:focus,
+input[type="text"]:focus,
+textarea:focus {
+  outline: none; /* Remove outline on focus */
+  border-color: #3498db; /* Change border color on focus */
+}
+
+button[type="submit"] {
+  width: 100%; /* Make submit button full-width */
+  padding: 10px; /* Add padding */
+  margin-top: 10px; /* Add some space above the button */
+  background-color: #3498db; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9; /* Button background color on hover */
+}
+
+/*////////////delete job/////////////////*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust as needed */
+}
+
+.item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.item h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item > div {
+  margin-bottom: 20px;
+}
+
+.item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.item p {
+  margin: 5px 0;
+}
+
+/*////////////delete Study/////////////*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust as needed */
+}
+
+.item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.item h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item > div {
+  margin-bottom: 20px;
+}
+
+.item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.item p {
+  margin: 5px 0;
+}
+
+
+
+
+
