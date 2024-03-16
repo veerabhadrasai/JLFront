@@ -38,7 +38,7 @@ const AllStudies = () => {
   const [data, setData] = useState([]);
   
   useEffect(() => {
-    axios.get('https://jlback.onrender.com/deletejob/study').then(res => setData(res.data));
+    axios.get('https://jlback.onrender.com/study').then(res => setData(res.data));
   }, []);
 
   const handleDelete = () => {
@@ -46,7 +46,7 @@ const AllStudies = () => {
     // For example, you might want to refresh the list of studies
     // This function will be passed as a callback to DeleteStudy
     // and will be triggered after a successful deletion
-    axios.get('https://jlback.onrender.com/deletejob/study').then(res => setData(res.data));
+    axios.get('https://jlback.onrender.com/study').then(res => setData(res.data));
   };
 
   return (

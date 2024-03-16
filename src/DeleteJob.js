@@ -34,7 +34,7 @@ const DeleteJob = ({ jobId, onDelete }) => {
 const AllJobs = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get('https://jlback.onrender.com/deletejob/alljobs').then((res) => setData(res.data));
+    axios.get('https://jlback.onrender.com/alljobs').then((res) => setData(res.data));
   }, []);
 
   return (  
