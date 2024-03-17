@@ -9,7 +9,7 @@ const JobDetails = () => {
   useEffect(()=>{
     axios.get(`https://jlback.onrender.com/job/${id}`).then(
       res=>setData(res.data))
-  },[])
+  },[id])
 
   return (
     <div className='jobDetails'>
