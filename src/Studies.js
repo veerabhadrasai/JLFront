@@ -6,7 +6,7 @@ const AllJobs = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('https://jlback.onrender.com/study').then(res => setData(res.data));
+    axios.get('https://jlback.onrender.com/study').then(res => setData(res.data.reverse()));
   }, []);
 
   return (
