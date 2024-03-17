@@ -12,7 +12,7 @@ const AllJobs = () => {
     <div> 
       <header className='header'><NavLink to='/'><div className='appName'>
       <h3>Government</h3><h1>Job Locator</h1>
-      <img src='search-job-logo-icon-design-vector-22742472.jpg'/>
+      <img src='search-job-logo-icon-design-vector-22742472.jpg' alt='logo'/>
      </div>
      </NavLink>
       <nav  className='navbar1'>
