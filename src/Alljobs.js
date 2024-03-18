@@ -36,7 +36,9 @@ const AllJobs = () => {
         </nav>
       </header>
       {loading ? (
-        <div className="loading"><h3>Loading...</h3></div>
+        <div className="loading-spinner-container">
+          <div className="loading-spinner"></div>
+        </div>
       ) : (
         <div className="card-container">
           <h1 className='headName'>All Jobs</h1>
@@ -61,5 +63,6 @@ const AllJobs = () => {
 };
 
 export default AllJobs;
+
 
 

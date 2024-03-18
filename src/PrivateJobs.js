@@ -25,23 +25,29 @@ const AllJobs = () => {
     <NavLink to='/studies' className='img3' data-title='Studies'><img src='46851208-education-and-learning-icons-graphic-design-vector-illustration.jpg' alt='Studies'/></NavLink>
       </nav>
         </header> 
+        {loading ? (
+        <div className="loading-spinner-container">
+          <div className="loading-spinner"></div>
+        </div>
+      ) : (
         <div className="card-container">
-  <h1 className='headName'>Private Jobs</h1>
-  {data.map(job => (
-    <div key={job._id} className="card">
-      <div className='heading'>
-        <h2>{job.jobRole}</h2>
-        <h5>{job.companyName}</h5>
-      </div>
-      <p>🚩 {job.location}</p>
-      <p>💵 {job.salary}</p>
-      <p>📅 {job.duration}</p>
-      <h4>
-        <NavLink to={`/job/${job._id}`}><button>viewdetails</button></NavLink>
-      </h4>
-    </div>
-  ))}
-</div>
+          <h1 className='headName'>All Jobs</h1>
+          {data.map(job => (
+            <div key={job._id} className="card">
+              <div className='heading'>
+                <h2>{job.jobRole}</h2>
+                <h5>{job.companyName}</h5>
+              </div>
+              <p>🚩 {job.location}</p>
+              <p>💵 {job.salary}</p>
+              <p>📅 {job.duration}</p>
+              <h4>
+                <NavLink to={`/job/${job._id}`}><button>ViewDetails</button></NavLink>
+              </h4>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
