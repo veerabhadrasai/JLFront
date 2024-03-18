@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 const AllJobs = () => {
   
     const [data,setData] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(()=>{
       axios.get('https://jlback.onrender.com/privatejob').then(res=>setData(res.data.reverse()))
     },[])
